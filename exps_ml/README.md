@@ -10,7 +10,6 @@ This repository benchmarks several tree-based classifiers across multiple diseas
 ## Files
 - `src/train_models.py` — main training script
 - `configs/exposures_by_disease.csv` — mapping: `disease, exposure` (one exposure per row)
-- `requirements.txt` — Python dependencies
 - `imputed_data_sample.csv` — small synthetic example to verify the pipeline
 
 ## Data placement (real analysis)
@@ -23,17 +22,13 @@ This repository benchmarks several tree-based classifiers across multiple diseas
    - Exposures: must match `configs/exposures_by_disease.csv`
    - Demographics: script expects `age, gender, race, education, PIR, eGFR, log_urinary_creatinine` by default
 
-## Install
-```bash
-pip install -r requirements.txt
-```
 
 ## Run (with sample)
 ```bash
 python src/train_models.py --data imputed_data_sample.csv
 ```
 
-## Run (with your real data)
+## Run (with real data)
 ```bash
 python src/train_models.py --data imputed_data.csv
 ```
