@@ -1,4 +1,4 @@
-# Exposure + Demographics ML Benchmark (Minimal, Reproducible)
+# Exposure + Demographics ML Benchmark
 
 This repository benchmarks several tree-based classifiers across multiple disease endpoints using:
 - Disease-specific exposure pools (`configs/exposures_by_disease.csv`)
@@ -11,18 +11,17 @@ This repository benchmarks several tree-based classifiers across multiple diseas
 - `src/train_models.py` — main training script
 - `configs/exposures_by_disease.csv` — mapping: `disease, exposure` (one exposure per row)
 - `requirements.txt` — Python dependencies
-- `imputed_data_sample.csv` — small synthetic example (100 rows) to verify the pipeline
+- `imputed_data_sample.csv` — small synthetic example to verify the pipeline
 
 ## Data placement (real analysis)
-Do **not** upload your real `imputed_data.csv` to GitHub. Instead:
 
-1. Put your real dataset at the repository root:
+1. Put your dataset at the repository root:
    - `./imputed_data.csv`
 
 2. Keep column names consistent with:
    - Disease columns: `Yes` / `No`
    - Exposures: must match `configs/exposures_by_disease.csv`
-   - Demographics: script expects `age, gender, race, education, PIR, eGFR` by default
+   - Demographics: script expects `age, gender, race, education, PIR, eGFR, log_urinary_creatinine` by default
 
 ## Install
 ```bash
